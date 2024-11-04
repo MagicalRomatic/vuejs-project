@@ -162,145 +162,167 @@
     bottom: 48px
     z-index: 30
     width: 100%
-    background: #fff
+    background: #f8f9fa // 轻柔的背景色
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) // 阴影效果
+    border-radius: 8px // 圆角效果
     transform: translate3d(0, 0, 0)
+    
     &.move-enter-active, &.move-leave-active
-      transition: all 0.2s linear
+      transition: all 0.2s ease-in-out // 动画过渡更平滑
     &.move-enter, &.move-leave-active
       transform: translate3d(100%, 0, 0)
+      
     .image-header
       position: relative
       width: 100%
       height: 0
       padding-top: 100%
+      border-top-left-radius: 8px // 圆角
+      border-top-right-radius: 8px // 圆角
       img
         position: absolute
         top: 0
         left: 0
         width: 100%
         height: 100%
+        border-top-left-radius: 8px // 圆角
+        border-top-right-radius: 8px // 圆角
+      
       .back
         position: absolute
         top: 10px
-        left: 0
+        left: 10px
         .icon-arrow_lift
           display: block
           padding: 10px
-          font-size: 20px
-          color: #fff
+          font-size: 24px // 字体增大
+          color: rgba(255, 255, 255, 0.9) // 透明度更高
 
     .content
       position: relative
-      padding: 18px
+      padding: 20px // 增加内边距
       .title
-        line-height: 14px
-        margin-bottom: 8px
-        font-size: 14px
-        font-weight: 700
-        color: rgb(7, 17, 27)
+        line-height: 20px // 增加行高
+        margin-bottom: 10px
+        font-size: 16px // 字体增大
+        font-weight: bold
+        color: #343a40 // 更深的颜色，提升可读性
+      
       .detail
         margin-bottom: 18px
-        line-height: 10px
-        height: 10px
-        font-size: 0
+        line-height: 14px
+        height: auto // 允许自适应高度
         .sell-count, .rating
-          font-size: 10px
-          color: rgb(147, 153, 159)
+          font-size: 12px // 字体增大
+          color: #6c757d // 统一的字体颜色
         .sell-count
           margin-right: 12px
+      
       .price
-        font-weight: 700
-        line-height: 24px
+        font-weight: bold
+        line-height: 28px // 增加行高
         .now
           margin-right: 8px
-          font-size: 14px
-          color: rgb(240, 20, 20)
+          font-size: 18px // 字体增大
+          color: #e63946 // 突出的价格颜色
         .old
           text-decoration: line-through
-          font-size: 10px
-          color: rgb(147, 153, 159)
+          font-size: 14px // 字体增大
+          color: #adb5bd // 更柔和的颜色
+      
       .cartcontrol-wrapper
         position: absolute
         right: 12px
         bottom: 12px
+      
       .buy
         position: absolute
         right: 18px
         bottom: 18px
         z-index: 10
-        height: 24px
-        line-height: 24px
-        padding: 0 12px
+        height: 36px // 增加按钮高度
+        line-height: 36px // 增加行高
+        padding: 0 16px // 增加内边距
         box-sizing: border-box
-        border-radius: 12px
-        font-size: 10px
+        border-radius: 18px // 圆角按钮
+        font-size: 12px // 字体增大
         color: #fff
-        background: rgb(0, 160, 220)
+        background: #007bff // 更吸引人的蓝色
         opacity: 1
+        
         &.fade-enter-active, &.fade-leave-active
           transition: all 0.2s
         &.fade-enter, &.fade-leave-active
           opacity: 0
           z-index: -1
+    
     .info
-      padding: 18px
+      padding: 20px // 增加内边距
       .title
-        line-height: 14px
-        margin-bottom: 6px
-        font-size: 14px
-        color: rgb(7, 17, 27)
+        line-height: 16px
+        margin-bottom: 8px
+        font-size: 16px // 字体增大
+        color: #343a40 // 更深的颜色
+      
       .text
         line-height: 24px
         padding: 0 8px
-        font-size: 12px
-        color: rgb(77, 85, 93)
+        font-size: 14px // 字体增大
+        color: #495057 // 更柔和的颜色
+    
     .rating
       padding-top: 18px
       .title
-        line-height: 14px
+        line-height: 16px
         margin-left: 18px
-        font-size: 14px
-        color: rgb(7, 17, 27)
+        font-size: 16px // 字体增大
+        color: #343a40 // 更深的颜色
+      
       .rating-wrapper
         padding: 0 18px
         .rating-item
           position: relative
           padding: 16px 0
-          border-1px(rgba(7, 17, 27, 0.1))
+          border-bottom: 1px solid rgba(7, 17, 27, 0.1) // 使用底部边框
           .user
             position: absolute
             right: 0
             top: 16px
             line-height: 12px
-            font-size: 0
+            font-size: 12px // 字体增大
+            color: #6c757d // 更柔和的颜色
             .name
               display: inline-block
               margin-right: 6px
               vertical-align: top
-              font-size: 10px
-              color: rgb(147, 153, 159)
+              font-size: 12px // 字体增大
+              color: #6c757d
             .avatar
               border-radius: 50%
+              border: 1px solid #e9ecef // 头像边框
+      
           .time
             margin-bottom: 6px
             line-height: 12px
-            font-size: 10px
-            color: rgb(147, 153, 159)
+            font-size: 12px // 字体增大
+            color: #6c757d // 更柔和的颜色
+          
           .text
             line-height: 16px
-            font-size: 12px
-            color: rgb(7, 17, 27)
+            font-size: 14px // 字体增大
+            color: #343a40 // 更深的颜色
             .icon-thumb_up, .icon-thumb_down
               margin-right: 4px
               line-height: 16px
-              font-size: 12px
+              font-size: 14px // 字体增大
             .icon-thumb_up
-              color: rgb(0, 160, 220)
+              color: #007bff // 使用主题颜色
             .icon-thumb_down
-              color: rgb(147, 153, 159)
+              color: #6c757d // 更柔和的颜色
 
         .no-rating
           padding: 16px 0
           font-size: 12px
-          color: rgb(147, 153, 159)
+          color: #6c757d // 更柔和的颜色
+
 </style>
